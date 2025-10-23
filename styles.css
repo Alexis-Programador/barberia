@@ -136,11 +136,11 @@ header p {
   margin-top: 10px;
 }
 
-/* ====== NOTIFICACIÓN DE CITA SELECCIONADA ====== */
+/* ====== NOTIFICACIÓN DE CITA SELECCIONADA (Ahora en la esquina inferior izquierda) ====== */
 .notificacion {
   position: fixed;
-  bottom: 70px;
-  right: 20px;
+  bottom: 20px; /* Ajustado para que se posicione en la parte inferior */
+  left: 20px;   /* Se mueve a la parte izquierda */
   background-color: #1a1a1a;
   border: 2px solid #0066ff;
   border-radius: 10px;
