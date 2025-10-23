@@ -1,0 +1,95 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #111;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #b30000;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  color: white;
+  margin: 0;
+}
+
+header p {
+  color: #ccc;
+}
+
+.cortes {
+  padding: 40px;
+  text-align: center;
+  background-color: #222;
+}
+
+.cortes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.corte {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #b30000;
+}
+
+.corte h3 {
+  color: #ff4444;
+}
+
+.agenda {
+  background-color: #1a1a1a;
+  padding: 40px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+input, select, button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 250px;
+}
+
+input, select {
+  background-color: #333;
+  color: white;
+}
+
+button {
+  background-color: #b30000;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ff4444;
+}
+
+#resultado {
+  margin-top: 20px;
+  color: #00ff99;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #000;
+  text-align: center;
+  padding: 10px;
+  color: #777;
+}
