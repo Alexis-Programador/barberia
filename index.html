@@ -3,66 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Barbería Estilo Urbano</title>
+  <title>BARBERÍA TIC</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>💈 Barbería Estilo Urbano 💈</h1>
+    <h1>💈 BARBERÍA TIC 💈</h1>
     <p>Tu estilo, nuestra pasión</p>
   </header>
 
-  <section class="cortes">
-    <h2>Nuestros Cortes</h2>
-    <div class="cortes-grid">
-      <div class="corte">
-        <h3>Corte Clásico</h3>
-        <p>Precio: $10</p>
+  <main>
+    <section class="cortes">
+      <h2>Galería de Cortes</h2>
+      <div class="cortes-grid">
+        <div class="corte">
+          <img src="https://cdn.pixabay.com/photo/2017/07/31/11/21/barber-2553153_1280.jpg" alt="Corte Fade">
+          <h3>Corte Fade</h3>
+          <p>$150</p>
+        </div>
+
+        <div class="corte">
+          <img src="https://cdn.pixabay.com/photo/2016/11/29/02/56/boy-1868568_1280.jpg" alt="Corte Clásico">
+          <h3>Corte Clásico</h3>
+          <p>$120</p>
+        </div>
+
+        <div class="corte">
+          <img src="https://cdn.pixabay.com/photo/2016/03/26/22/13/man-1283237_1280.jpg" alt="Corte Moderno">
+          <h3>Corte Moderno</h3>
+          <p>$180</p>
+        </div>
       </div>
-      <div class="corte">
-        <h3>Fade Moderno</h3>
-        <p>Precio: $15</p>
-      </div>
-      <div class="corte">
-        <h3>Barba + Corte</h3>
-        <p>Precio: $20</p>
-      </div>
-      <div class="corte">
-        <h3>Corte Infantil</h3>
-        <p>Precio: $8</p>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <section class="agenda">
-    <h2>Agenda tu Cita</h2>
-    <form id="formCita">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" required>
-
-      <label for="corte">Selecciona tu corte:</label>
-      <select id="corte" required>
-        <option value="">-- Selecciona --</option>
-        <option value="Corte Clásico - $10">Corte Clásico - $10</option>
-        <option value="Fade Moderno - $15">Fade Moderno - $15</option>
-        <option value="Barba + Corte - $20">Barba + Corte - $20</option>
-        <option value="Corte Infantil - $8">Corte Infantil - $8</option>
-      </select>
-
-      <label for="fecha">Fecha:</label>
-      <input type="date" id="fecha" required>
-
-      <label for="hora">Hora:</label>
-      <input type="time" id="hora" required>
-
-      <button type="submit">Agendar</button>
-    </form>
-
-    <div id="resultado"></div>
-  </section>
+  <div class="calendario" title="Asigna tu cita">
+    <h3>📅 Agenda tu Cita</h3>
+    <input type="date" id="fecha">
+    <input type="time" id="hora">
+    <button onclick="agendarCita()">Agendar</button>
+    <p id="mensaje"></p>
+  </div>
 
   <footer>
-    <p>© 2025 Barbería Estilo Urbano - Todos los derechos reservados</p>
+    <p>© 2025 Barbería TIC - Todos los derechos reservados</p>
   </footer>
 
   <script src="script.js"></script>
