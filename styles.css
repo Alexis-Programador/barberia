@@ -16,12 +16,13 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 2.2em;
+  font-size: 2.5em;
   color: #fff;
 }
 
 header p {
   color: #ccc;
+  font-size: 1.2em;
 }
 
 /* ====== GALERÍA DE CORTES ====== */
@@ -33,6 +34,7 @@ header p {
 .cortes h2 {
   color: #ff3333;
   margin-bottom: 20px;
+  font-size: 2em;
 }
 
 .cortes-grid {
@@ -40,6 +42,7 @@ header p {
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .corte {
@@ -47,8 +50,9 @@ header p {
   border: 2px solid #b30000;
   border-radius: 10px;
   overflow: hidden;
-  width: 250px;
+  width: 300px;
   transition: transform 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
 }
 
 .corte img {
@@ -59,18 +63,25 @@ header p {
 
 .corte h3 {
   color: #fff;
-  margin: 10px 0 5px 0;
+  margin: 10px 0;
+  font-size: 1.4em;
 }
 
 .corte p {
   color: #ff4444;
   font-weight: bold;
   margin-bottom: 10px;
+  font-size: 1.2em;
 }
 
 .corte:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px #b30000;
+}
+
+.corte:hover img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 /* ====== CALENDARIO INFERIOR DERECHA ====== */
@@ -96,6 +107,7 @@ header p {
 
 .calendario h3 {
   color: #ff3333;
+  margin-bottom: 10px;
 }
 
 .calendario input, .calendario select, .calendario button {
