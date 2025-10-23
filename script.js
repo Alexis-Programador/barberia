@@ -1,11 +1,11 @@
-// Generar horarios disponibles (10:00 AM - 10:00 PM, cada 30 min, excluyendo 2-4 PM)
+// Función para generar horarios (10:00 AM - 10:00 PM, cada 30 min, excluyendo 2-4 PM)
 const horaSelect = document.getElementById("hora");
 const mensaje = document.getElementById("mensaje");
 
 function generarHoras() {
   const horas = [];
   for (let h = 10; h <= 22; h++) {
-    if (h >= 14 && h < 16) continue; // saltar descanso 2pm - 4pm
+    if (h >= 14 && h < 16) continue; // Salto del descanso 2pm - 4pm
     horas.push(`${h.toString().padStart(2, "0")}:00`);
     horas.push(`${h.toString().padStart(2, "0")}:30`);
   }
@@ -28,13 +28,30 @@ function formatoHora12(hora24) {
 
 generarHoras();
 
-function agendarCita() {
-  const fecha = document.getElementById("fecha").value;
-  const hora = document.getElementById("hora").value;
+// Función para seleccionar el corte
+let corteSeleccionado = null;
 
-  if (fecha && hora) {
-    mensaje.innerHTML = `✅ Cita agendada para el <b>${fecha}</b> a las <b>${formatoHora12(hora)}</b>.`;
-  } else {
-    mensaje.innerHTML = "⚠️ Por favor selecciona fecha y hora.";
+function seleccionarCorte(corte, precio) {
+  // Si ya se había seleccionado un corte, lo deseleccionamos
+  if (corteSeleccionado) {
+    corteSeleccionado.classList.remove("seleccionado");
   }
+
+  // Seleccionamos el nuevo corte
+  const corteElement = event.currentTarget;
+  corteElement.classList.add("seleccionado");
+  corteSeleccionado = corteElement;
+
+  // Mostrar la notificación con el corte seleccionado
+  document.getElementById("corteSeleccionado").textContent = corte;
+  document.getElementById("notificacion").style.display = "block";
+}
+
+// Función para cancelar la selección de corte
+function cancelarSeleccion() {
+  if (corteSeleccionado) {
+    corteSeleccionado.classList.remove("seleccionado");
+  }
+  document.getElementById("corteSeleccionado").textContent = "Ninguno";
+  document.getElementById("notificacion").style.display = "none";
 }
