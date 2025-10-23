@@ -85,7 +85,7 @@ header p {
   width: 230px;
   text-align: center;
   transition: all 0.3s ease-in-out;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .calendario:hover {
@@ -98,7 +98,7 @@ header p {
   color: #ff3333;
 }
 
-.calendario input, .calendario button {
+.calendario input, .calendario select, .calendario button {
   margin: 5px 0;
   width: 90%;
   padding: 8px;
