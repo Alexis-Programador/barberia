@@ -31,16 +31,15 @@ generarHoras();
 // Función para seleccionar el corte
 let corteSeleccionado = null;
 
-function seleccionarCorte(corte, precio) {
+function seleccionarCorte(element, corte, precio) {
   // Si ya se había seleccionado un corte, lo deseleccionamos
   if (corteSeleccionado) {
     corteSeleccionado.classList.remove("seleccionado");
   }
 
   // Seleccionamos el nuevo corte
-  const corteElement = event.currentTarget;
-  corteElement.classList.add("seleccionado");
-  corteSeleccionado = corteElement;
+  element.classList.add("seleccionado");
+  corteSeleccionado = element;
 
   // Mostrar la notificación con el corte seleccionado
   document.getElementById("corteSeleccionado").textContent = corte;
