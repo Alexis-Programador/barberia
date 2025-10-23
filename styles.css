@@ -81,7 +81,7 @@ header p {
 }
 
 .corte.seleccionado {
-  border: 3px solid #0066ff;
+  border: 3px solid #0066ff; /* Borde azul para la selección */
 }
 
 /* ====== CALENDARIO INFERIOR DERECHA ====== */
