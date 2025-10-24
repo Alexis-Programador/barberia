@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BARBERÍA TIC</title>
+  <title>💈 Barbería TIC 💈</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,51 +11,72 @@
     <h1>💈 BARBERÍA TIC 💈</h1>
     <p>Tu estilo, nuestra pasión</p>
   </header>
-
+ 
+ 
   <main>
     <section class="cortes">
       <h2>Galería de Cortes</h2>
       <div class="cortes-grid">
-
+ 
         <div class="corte" onclick="seleccionarCorte(this, 'Corte Fade', 150)">
           <img src="corte fade.jfif" alt="Corte Fade">
           <h3>Corte Fade</h3>
           <p>$150</p>
         </div>
-
+ 
         <div class="corte" onclick="seleccionarCorte(this, 'Corte Clásico', 120)">
           <img src="corte clasico.jfif" alt="Corte Clásico">
           <h3>Corte Clásico</h3>
           <p>$120</p>
         </div>
-
+ 
         <div class="corte" onclick="seleccionarCorte(this, 'Corte Moderno', 180)">
           <img src="corte moderno.jfif" alt="Corte Moderno">
           <h3>Corte Moderno</h3>
           <p>$180</p>
         </div>
-
+ 
       </div>
     </section>
   </main>
-
+ 
+  <!-- 🔔 Notificaciones arriba del calendario -->
+  <div class="notificaciones">
+    <div id="notifErrores" class="notif error"></div>
+    <div id="notifCortes" class="notif exito"></div>
+  </div>
+ 
+  <!-- 📅 Calendario -->
   <div class="calendario" title="Asigna tu cita">
     <h3>📅 Agenda tu Cita</h3>
     <input type="date" id="fecha">
     <select id="hora"></select>
     <button onclick="agendarCita()">Agendar</button>
-    <p id="mensaje"></p>
+    <h3>Citas Agendadas</h3>
+    <ul id="listaCitas"></ul>
   </div>
-
-  <div id="notificacion" class="notificacion">
+ 
+  <!-- 🔔 Notificación de corte seleccionado -->
+  <div id="notificacionCorte" class="notificacion">
     <p>Corte seleccionado: <span id="corteSeleccionado">Ninguno</span></p>
     <button onclick="cancelarSeleccion()">Cancelar Corte</button>
   </div>
-
+ 
+  <!-- Botón fijo en la parte derecha -->
+<button id="btnRegistroCitas" class="btn-registro">📋 Ver Registro de Citas</button>
+ 
+<!-- Panel lateral izquierdo -->
+<div id="registroCitas" class="registro-citas">
+  <h3>Registro de Citas</h3>
+  <ul id="listaRegistro"></ul>
+  <button onclick="cerrarRegistro()">Cerrar Registro</button>
+</div>
+ 
+ 
   <footer>
     <p>© 2025 Barbería TIC - Todos los derechos reservados</p>
   </footer>
-
+ 
   <script src="script.js"></script>
 </body>
 </html>
