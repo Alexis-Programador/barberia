@@ -5,38 +5,39 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
- 
+
 /* ====== ENCABEZADO ====== */
 header {
     background-color: #b30000;
     text-align: center;
     padding: 20px;
 }
- 
+
 header h1 {
     margin: 0;
     font-size: 2.5em;
     color: #fff;
 }
- 
+
 header p {
     color: #ccc;
     font-size: 1.2em;
 }
- 
+
 /* ====== GALERÍA DE CORTES ====== */
 .cortes {
     text-align: center;
-    padding: 40px;
+    padding: 40px 20px;
 }
- 
+
 .cortes h2 {
     color: #ff3333;
     margin-bottom: 20px;
     font-size: 2em;
 }
- 
+
 .cortes-grid {
     display: flex;
     justify-content: center;
@@ -44,7 +45,7 @@ header p {
     flex-wrap: wrap;
     margin-top: 30px;
 }
- 
+
 .corte {
     background-color: #222;
     border: 2px solid #b30000;
@@ -55,33 +56,33 @@ header p {
     box-sizing: border-box;
     cursor: pointer;
 }
- 
+
 .corte img {
     width: 100%;
     height: 250px;
     object-fit: cover;
 }
- 
+
 .corte h3 {
     color: #fff;
     margin: 10px 0;
 }
- 
+
 .corte p {
     color: #ff4444;
     font-weight: bold;
     margin-bottom: 10px;
 }
- 
+
 .corte:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px #b30000;
 }
- 
+
 .corte.seleccionado {
     border: 3px solid #0066ff;
 }
- 
+
 /* ====== NOTIFICACIONES ====== */
 .notificaciones {
     position: fixed;
@@ -91,7 +92,7 @@ header p {
     text-align: center;
     z-index: 100;
 }
- 
+
 .notif {
     display: none;
     margin-bottom: 8px;
@@ -100,15 +101,15 @@ header p {
     color: white;
     font-size: 0.9em;
 }
- 
+
 .notif.exito {
     background-color: #009900;
 }
- 
+
 .notif.error {
     background-color: #cc0000;
 }
- 
+
 /* ====== CALENDARIO ====== */
 .calendario {
     position: fixed;
@@ -118,17 +119,20 @@ header p {
     border: 2px solid #b30000;
     border-radius: 10px;
     padding: 15px;
-    width: 230px;
+    width: 250px;
     text-align: center;
-    opacity: 0.9;
+    opacity: 0.95;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
 }
- 
+
 .calendario h3 {
     color: #ff3333;
     margin-bottom: 10px;
 }
- 
-.calendario input, .calendario select, .calendario button {
+
+.calendario input,
+.calendario select,
+.calendario button {
     margin: 5px 0;
     width: 90%;
     padding: 8px;
@@ -137,24 +141,24 @@ header p {
     background-color: #333;
     color: white;
 }
- 
+
 .calendario button {
     background-color: #b30000;
     cursor: pointer;
     transition: background 0.3s;
 }
- 
+
 .calendario button:hover {
     background-color: #ff3333;
 }
- 
+
 /* ====== LISTA DE CITAS ====== */
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
- 
+
 li {
     background: #333;
     color: #fff;
@@ -165,7 +169,7 @@ li {
     justify-content: space-between;
     align-items: center;
 }
- 
+
 .btnEliminar {
     background-color: #ff3333;
     color: white;
@@ -174,11 +178,11 @@ li {
     border-radius: 5px;
     cursor: pointer;
 }
- 
+
 .btnEliminar:hover {
     background-color: #b30000;
 }
- 
+
 /* ====== NOTIFICACIÓN DE CORTE ====== */
 .notificacion {
     position: fixed;
@@ -192,7 +196,7 @@ li {
     width: 230px;
     display: none;
 }
- 
+
 .notificacion button {
     margin-top: 10px;
     background-color: #ff3333;
@@ -203,7 +207,12 @@ li {
     border: none;
     width: 100%;
 }
- 
+
+.notificacion button:hover {
+    background-color: #b30000;
+}
+
+/* ====== FOOTER ====== */
 footer {
     background-color: #000;
     text-align: center;
@@ -211,9 +220,8 @@ footer {
     color: #777;
     margin-top: 30px;
 }
- 
+
 /* ====== REGISTRO DE CITAS ====== */
-/* Botón fijo en la parte superior derecha */
 .btn-registro {
     position: fixed;
     top: 20px;
@@ -228,16 +236,16 @@ footer {
     font-size: 1em;
     transition: background 0.3s;
 }
- 
+
 .btn-registro:hover {
     background-color: #3399ff;
 }
- 
+
 /* Panel lateral ajustado */
 .registro-citas {
     position: fixed;
     top: 0;
-    left: -350px; /* Oculto por defecto */
+    left: -350px;
     width: 350px;
     height: 100%;
     background-color: #222;
@@ -248,22 +256,22 @@ footer {
     transition: left 0.4s ease;
     z-index: 250;
 }
- 
+
 .registro-citas.open {
-    left: 50px; /* Ajusta para que se vea completamente */
+    left: 0;
 }
- 
+
 .registro-citas h3 {
     color: #ff3333;
     margin-bottom: 15px;
 }
- 
+
 .registro-citas ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
- 
+
 .registro-citas li {
     background-color: #333;
     color: white;
@@ -271,7 +279,7 @@ footer {
     padding: 8px;
     border-radius: 5px;
 }
- 
+
 .registro-citas button {
     margin-top: 15px;
     width: 100%;
@@ -282,14 +290,15 @@ footer {
     border: none;
     cursor: pointer;
 }
- 
+
+.registro-citas button:hover {
+    background-color: #b30000;
+}
+
 #listaCitas {
     display: none;
 }
- 
- 
- 
- 
+
 .btnEliminarRegistro {
     background-color: #ff3333;
     color: white;
@@ -299,7 +308,7 @@ footer {
     cursor: pointer;
     margin-left: 10px;
 }
- 
+
 .btnEliminarRegistro:hover {
     background-color: #b30000;
 }
