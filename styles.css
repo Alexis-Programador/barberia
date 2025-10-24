@@ -85,13 +85,14 @@ header p {
 
 /* ====== NOTIFICACIONES ====== */
 .notificaciones {
-    position: fixed;
-    bottom: 160px;
+    position: fixed;      /* Corregido */
+    bottom: 300px;        /* Más arriba (antes estaba 160px) */
     right: 20px;
     width: 260px;
     text-align: center;
     z-index: 100;
 }
+
 
 .notif {
     display: none;
@@ -112,7 +113,7 @@ header p {
 
 /* ====== CALENDARIO ====== */
 .calendario {
-    position: relative; /* permite colocar notificación arriba */
+    position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: #1a1a1a;
@@ -125,25 +126,6 @@ header p {
     box-shadow: 0 0 10px rgba(0,0,0,0.6);
 }
 
-/* ====== NOTIFICACIÓN SOBRE EL CALENDARIO ====== */
-.notif.exito {
-    position: absolute;
-    top: -150px; /* la sube arriba del recuadro */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #009900;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-size: 0.9em;
-    width: 90%;
-    text-align: center;
-    z-index: 999;
-    display: block;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-}
-
-/* ====== INPUTS DEL CALENDARIO ====== */
 .calendario h3 {
     color: #ff3333;
     margin-bottom: 10px;
