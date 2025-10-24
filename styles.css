@@ -1,175 +1,305 @@
 /* ====== ESTILOS GENERALES ====== */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #111;
-  color: #fff;
-  margin: 0;
-  padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
-
+ 
 /* ====== ENCABEZADO ====== */
 header {
-  background-color: #b30000;
-  text-align: center;
-  padding: 20px;
+    background-color: #b30000;
+    text-align: center;
+    padding: 20px;
 }
-
+ 
 header h1 {
-  margin: 0;
-  font-size: 2.5em;
-  color: #fff;
+    margin: 0;
+    font-size: 2.5em;
+    color: #fff;
 }
-
+ 
 header p {
-  color: #ccc;
-  font-size: 1.2em;
+    color: #ccc;
+    font-size: 1.2em;
 }
-
+ 
 /* ====== GALERÍA DE CORTES ====== */
 .cortes {
-  text-align: center;
-  padding: 40px;
+    text-align: center;
+    padding: 40px;
 }
-
+ 
 .cortes h2 {
-  color: #ff3333;
-  margin-bottom: 20px;
-  font-size: 2em;
+    color: #ff3333;
+    margin-bottom: 20px;
+    font-size: 2em;
 }
-
+ 
 .cortes-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
-
+ 
 .corte {
-  background-color: #222;
-  border: 2px solid #b30000;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 250px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-sizing: border-box;
-  cursor: pointer;
+    background-color: #222;
+    border: 2px solid #b30000;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
 }
-
+ 
 .corte img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
-
+ 
 .corte h3 {
-  color: #fff;
-  margin: 10px 0;
-  font-size: 1.4em;
+    color: #fff;
+    margin: 10px 0;
 }
-
+ 
 .corte p {
-  color: #ff4444;
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 1.2em;
+    color: #ff4444;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
-
+ 
 .corte:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #b30000;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #b30000;
 }
-
+ 
 .corte.seleccionado {
-  border: 3px solid #0066ff; /* Borde azul para la selección */
+    border: 3px solid #0066ff;
 }
-
-/* ====== CALENDARIO INFERIOR DERECHA ====== */
+ 
+/* ====== NOTIFICACIONES ====== */
+.notificaciones {
+    position: fixed;
+    bottom: 160px;
+    right: 20px;
+    width: 260px;
+    text-align: center;
+    z-index: 100;
+}
+ 
+.notif {
+    display: none;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.9em;
+}
+ 
+.notif.exito {
+    background-color: #009900;
+}
+ 
+.notif.error {
+    background-color: #cc0000;
+}
+ 
+/* ====== CALENDARIO ====== */
 .calendario {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #1a1a1a;
-  border: 2px solid #b30000;
-  border-radius: 10px;
-  padding: 15px;
-  width: 230px;
-  text-align: center;
-  transition: all 0.3s ease-in-out;
-  opacity: 0.85;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1a1a1a;
+    border: 2px solid #b30000;
+    border-radius: 10px;
+    padding: 15px;
+    width: 230px;
+    text-align: center;
+    opacity: 0.9;
 }
-
-.calendario:hover {
-  transform: scale(1.05);
-  opacity: 1;
-  box-shadow: 0 0 15px #b30000;
-}
-
+ 
 .calendario h3 {
-  color: #ff3333;
-  margin-bottom: 10px;
+    color: #ff3333;
+    margin-bottom: 10px;
 }
-
+ 
 .calendario input, .calendario select, .calendario button {
-  margin: 5px 0;
-  width: 90%;
-  padding: 8px;
-  border-radius: 5px;
-  border: none;
-  background-color: #333;
-  color: white;
+    margin: 5px 0;
+    width: 90%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: white;
 }
-
+ 
 .calendario button {
-  background-color: #b30000;
-  cursor: pointer;
-  transition: background 0.3s;
+    background-color: #b30000;
+    cursor: pointer;
+    transition: background 0.3s;
 }
-
+ 
 .calendario button:hover {
-  background-color: #ff3333;
+    background-color: #ff3333;
 }
-
-#mensaje {
-  color: #00ff99;
-  font-size: 0.9em;
-  margin-top: 10px;
+ 
+/* ====== LISTA DE CITAS ====== */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-
-/* ====== NOTIFICACIÓN DE CITA SELECCIONADA (Ahora en la esquina inferior izquierda) ====== */
+ 
+li {
+    background: #333;
+    color: #fff;
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.btnEliminar {
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ 
+.btnEliminar:hover {
+    background-color: #b30000;
+}
+ 
+/* ====== NOTIFICACIÓN DE CORTE ====== */
 .notificacion {
-  position: fixed;
-  bottom: 20px; /* Ajustado para que se posicione en la parte inferior */
-  left: 20px;   /* Se mueve a la parte izquierda */
-  background-color: #1a1a1a;
-  border: 2px solid #0066ff;
-  border-radius: 10px;
-  padding: 10px;
-  text-align: center;
-  width: 230px;
-  display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #1a1a1a;
+    border: 2px solid #0066ff;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 230px;
+    display: none;
 }
-
+ 
 .notificacion button {
-  margin-top: 10px;
-  background-color: #ff3333;
-  color: white;
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 5px;
-  border: none;
-  width: 100%;
+    margin-top: 10px;
+    background-color: #ff3333;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
 }
-
-.notificacion button:hover {
-  background-color: #b30000;
-}
-
-/* ====== PIE DE PÁGINA ====== */
+ 
 footer {
-  background-color: #000;
-  text-align: center;
-  padding: 10px;
-  color: #777;
-  margin-top: 30px;
+    background-color: #000;
+    text-align: center;
+    padding: 10px;
+    color: #777;
+    margin-top: 30px;
+}
+ 
+/* ====== REGISTRO DE CITAS ====== */
+/* Botón fijo en la parte superior derecha */
+.btn-registro {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 300;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+ 
+.btn-registro:hover {
+    background-color: #3399ff;
+}
+ 
+/* Panel lateral ajustado */
+.registro-citas {
+    position: fixed;
+    top: 0;
+    left: -350px; /* Oculto por defecto */
+    width: 350px;
+    height: 100%;
+    background-color: #222;
+    border-right: 3px solid #0066ff;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    transition: left 0.4s ease;
+    z-index: 250;
+}
+ 
+.registro-citas.open {
+    left: 50px; /* Ajusta para que se vea completamente */
+}
+ 
+.registro-citas h3 {
+    color: #ff3333;
+    margin-bottom: 15px;
+}
+ 
+.registro-citas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ 
+.registro-citas li {
+    background-color: #333;
+    color: white;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+}
+ 
+.registro-citas button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+ 
+#listaCitas {
+    display: none;
+}
+ 
+ 
+ 
+ 
+.btnEliminarRegistro {
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+ 
+.btnEliminarRegistro:hover {
+    background-color: #b30000;
 }
