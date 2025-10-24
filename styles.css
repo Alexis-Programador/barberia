@@ -128,7 +128,7 @@ header p {
 /* ====== NOTIFICACIÓN SOBRE EL CALENDARIO ====== */
 .notif.exito {
     position: absolute;
-    top: 0px; /* la sube arriba del recuadro */
+    top: -150px; /* la sube arriba del recuadro */
     left: 50%;
     transform: translateX(-50%);
     background-color: #009900;
